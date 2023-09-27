@@ -7,13 +7,7 @@
 ?>
 
 <footer>
-    <div class="footer-top-wrp">
-        <div class="container">
-            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("footer-top")): ?>
-            <p class="widget-not">Footer top</p>
-            <?php endif; ?>
-        </div>
-    </div>
+    
     <div class="footer-wrp">
         <div class="footer-top-wrp">
             <div class="container">
