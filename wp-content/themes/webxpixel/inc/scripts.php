@@ -14,6 +14,7 @@ if (!function_exists('webxpixel_enqueue_scripts')) {
     
         wp_enqueue_style('webxpixel-landing', WPX_CSS_URL . 'landing.min.css', array(), WPX_VERSION);
         wp_enqueue_style('webxpixel-webfont', WPX_CSS_URL . 'webfonts.css', array(), WPX_VERSION);
+        wp_enqueue_style('bootstrap', WPX_CSS_URL . 'bootstrap.min.css', array(), WPX_VERSION);
         wp_enqueue_style('awesome', WPX_CSS_URL . 'font-awesome.css', array(), WPX_VERSION);
         wp_enqueue_script('bootstrap', WPX_JS_URL . 'bootstrap.bundle.min.js', $dep, WPX_VERSION, true); 
         wp_enqueue_script('webxpixel-main', WPX_JS_URL . 'main.js', $dep, time(), true);
