@@ -1,0 +1,97 @@
+/*-------------------------
+    Section Heading 
+-------------------------*/
+.section-heading {
+    position: relative;
+    margin-bottom: 40px;
+
+    .sub-title {
+        background-color: #FFC400;
+        padding: 7px 25px;
+        border-radius: 8px;
+        color: var(--color-dark);
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .title {      
+        &.title-default {
+            font-size: 56px;
+            @media (max-width: 1199px) {
+                font-size: 50px;
+                br {
+                    display: none;
+                }
+            }
+            @media (max-width: 991px) {
+                font-size: 42px;
+            }
+            @media (max-width: 767px) {
+                font-size: 36px;
+            }
+            @media (max-width: 575px) {
+                font-size: 32px;
+            }
+        }
+        &.title-medium {
+            font-size: 40px;
+            @media (max-width: 991px) {
+                font-size: 36px;
+            }
+            @media (max-width: 767px) {
+                font-size: 32px;
+            }
+            @media (max-width: 575px) {
+                font-size: 30px;
+            }
+        }
+        &.title-small {
+            font-size: 20px;
+        }
+    }
+
+    .description {
+        font-size: 24px;
+        @media (max-width: 1199px) {
+            br {
+                display: none;
+            }
+        }
+        @media (max-width: 991px) {
+            font-size: 22px;
+        }
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
+        @media (max-width: 575px) {
+            font-size: 18px;
+        }
+        span {
+            display: inline-block;
+            margin: 0 5px;
+            font-weight: 700;
+            color: var(--color-dark);
+        }       
+    }
+
+    &.heading-left {
+        text-align: left;
+    }
+    &.heading-center {
+        text-align: center;
+    }
+    &.heading-dark {
+        .title {
+            color: var(--color-dark);
+        }
+    }
+    &.heading-light {
+        .title {
+            color: var(--color-white);
+        }
+        .description {
+            color: #D5D9FB;
+        }
+    }
+}

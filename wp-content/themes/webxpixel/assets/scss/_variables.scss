@@ -1,0 +1,50 @@
+/*-------------------------
+    Variables
+-------------------------*/
+:root {
+  // Color
+  --color-primary: #00a9c1;
+  --color-secondary: #ffc900; 
+  --color-body: #555555;
+  --color-title: #3B3C42;
+  --color-title-rgb: rgb(59,60,66); 
+  --color-white: #ffffff;
+
+  //Font Family
+  --font-primary: Montserrat;
+  --font-secondary: Istok Web;
+
+  // Transition
+  --transition: all 0.3s ease-in-out;
+  
+  //Fonts Size
+  --font-body-1: 18px;
+  --font-body-2: 16px;
+  --font-body-3: 14px;
+  --font-body-4: 12px;
+  
+  // Line Height
+  --line-height-b1: 1.5;
+  --line-height-b3: 1.1;
+  
+  // Heading Font 
+  --h1: 46px; 
+  --h2: 36px; 
+  --h3: 25px;
+  --h4: 22px; 
+  --h5: 20px; 
+  --h6: 18px; 
+  }
+  
+  // Box Layout Width
+  $box-layout: 1600px;
+  
+  // Layouts Variation
+  $smlg-device: 'only screen and (max-width: 1199px)';
+  $extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+  $laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+  $lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+  $md-layout:'only screen and (max-width: 991px)';
+  $sm-layout:'only screen and (max-width: 767px)';
+  $large-mobile: 'only screen and (max-width: 575px)';
+  $small-mobile: 'only screen and (max-width: 479px)';

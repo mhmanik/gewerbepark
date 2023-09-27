@@ -1,0 +1,26 @@
+/*-------------------------
+    Reset Styels
+-------------------------*/
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1156px;
+    }
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+span {
+    display: inline-block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+ul li{
+    list-style: none;
+}

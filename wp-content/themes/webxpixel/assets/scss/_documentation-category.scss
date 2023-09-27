@@ -1,0 +1,38 @@
+.documentation-category-box {
+    text-align: center;
+    border-radius: 8px;
+    padding: 30px 28px;
+    background-color: var(--color-white);
+    transition: var(--transition);
+
+    .category-icon {
+        margin-bottom: 20px;
+
+        img {
+            filter: grayscale(1);
+            transition: var(--transition);
+        }
+    }
+
+    .category-content {
+        .title {
+            font-size: 20px;
+        }
+    }
+
+    .category-border {
+        margin-top: 30px;
+        padding-top: 18px;
+        border-top: 1px solid #D3D3D3;
+    }
+
+    &:hover {
+        box-shadow: 0px 24px 16px 0 rgba(#0A1F44, 0.16);
+
+        .category-icon {
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+}

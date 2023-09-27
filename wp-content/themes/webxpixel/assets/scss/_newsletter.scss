@@ -1,0 +1,94 @@
+.newsletter-wrap-1 {
+    background-color: #2B2E52;
+    padding: 120px 0;
+}
+.newsletter-style-1 {
+    text-align: center;
+    .title {
+        color: var(--color-white);
+        font-size: 56px;
+        font-weight: 700;
+    }
+    .description {
+        color: #D5D9FB;
+        font-size: 24px;
+    }
+    .newsletter-form {
+        form {
+            max-width: 700px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .input-group {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            color: var(--typo-title);
+            padding: 10px 30px;
+            background-color: #fff;
+            border: none;
+            text-overflow: ellipsis;
+        }
+        .btn-newsletter {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 0;
+            border-radius: 8px;
+            text-decoration: none;
+            background-color: var(--color-primary);
+            color: #fff;
+            white-space: nowrap;
+            margin-left: 20px;
+            font-weight: 700;
+        }
+    }
+}
+
+.newsletter-style-2 {
+    width: 100%;
+    max-width: 360px;
+    background-color: #2B2E52;
+    padding: 50px 40px;
+    border-radius: 8px;
+    .title {
+        color: var(--color-white);
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .newsletter-form {
+        form {
+            width: 100%;
+        }
+        .input-group {
+            width: 100%;
+            display: block;
+            margin-bottom: 15px;
+        }
+        input {
+            height: 48px;
+            width: 100%;
+            color: var(--typo-title);
+            padding: 10px 30px;
+            background-color: #fff;
+            border: none;
+            text-overflow: ellipsis;
+            border-radius: 8px;
+        }
+        .btn-newsletter {
+            height: 48px;
+            display: inline-block;
+            padding: 10px 30px;
+            border: 0;
+            border-radius: 8px;
+            text-decoration: none;
+            background-color: var(--color-primary);
+            color: #fff;
+            white-space: nowrap;
+            font-weight: 700;
+            width: 100%;
+        }
+    }
+}

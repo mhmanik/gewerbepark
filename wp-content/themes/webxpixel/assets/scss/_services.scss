@@ -1,0 +1,69 @@
+.webxpixel-services {
+    .services-nav {
+        .title {
+            .elementor-heading-title {
+                font-size: 20px;
+                a {
+                    color: #6F728F;
+                    transition: var(--transition);
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        color: #1BA2DB;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .services-content {
+        .content-heading {
+            .elementor-heading-title {
+                font-size: 24px;
+                color: #2B2E52;
+            }
+        }
+        .content-content {
+            font-size: 20px;
+        }
+    }
+}
+
+.services-wrap {
+    .service-title {
+        font-size: 20px;
+        font-weight: 400;
+        a {
+            color: #6F728F;
+            transition: var(--transition);
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                color: #1BA2DB;
+                text-decoration: underline;
+            }
+        }
+    }
+    .service-content {
+        padding-bottom: 30px;        
+        padding-left: 50px;        
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.service-content-column {
+    border-left: 1px solid #D3D3D3;
+    >div {
+        margin-bottom: -50px;
+    }
+}
