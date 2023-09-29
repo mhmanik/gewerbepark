@@ -39,45 +39,62 @@
             <div class="container">
                 <div class="header-top-inner-wrp">
                     <div class="gap-3 flex-wrap d-flex align-items-center justify-content-between">
-                        <div class="copyright">
+                        <div class="headerTop-list-wrap">
                             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("header-top-left")): ?> 
-                            <ul>
-                            <li>Haben Sie Fragen? </li>
-                            <li> <i class="fa fa-phone"></i> <a href="tell:06151 96985222">06151 96985222 </a></li>
-                            <li> <i class="fa fa-envelope"></i> <a href="mailto:info@gewerbepark-schwinn.de">info@gewerbepark-schwinn.de</a></li>
-                            </ul>
+                                <ul class="headerTop-list">
+                                    <li>Haben Sie Fragen? </li>
+                                    <li> 
+                                        <i class="fa fa-phone"></i> 
+                                        <span class="text-style"> 06151 96985222 </span>
+                                    </li>
+                                    <li>
+                                        <a class="no-text-decoration" href="mailto:info@gewerbepark-schwinn.de">
+                                            <i class="fa fa-envelope"></i> 
+                                            <span class="text-style">info@gewerbepark-schwinn.de</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             <?php endif; ?>
                         </div>
-                        <div class="copyright-social">
+                        <div class="headerTop-list-wrap">
                             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("header-top-right")): ?>
-                              <ul>
-<li>Finden Sie uns auf Facebook </li>
-<li>  <a href="https://www.facebook.com/GewerbeparksSchwinn" target="_blank">
-<i class="fab fa-facebook"></i>
-</a></li>
-</ul> 
+                                <ul class="headerTop-list">
+                                    <li> 
+                                        <a class="no-text-decoration style" href="https://www.facebook.com/GewerbeparksSchwinn" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                    <li>Finden Sie uns auf Facebook </li>
+                                </ul> 
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
         <header class="header wpx-header header-style-1">
             <div id="wpx-sticky-placeholder"></div>
-            <div class="wpx-mainmenu">
-                <div class="header-navbar">
-                    <div class="header-logo">
-                        <a href="<?php echo esc_url( home_url( '/' ) );?>"><img class="light-version-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="logo"></a>
-                         
-                    </div>
-                    <div class="header-main-nav">
-                        <!-- Start Mainmanu Nav -->
-                        <?php if (has_nav_menu('primary')) {
-                            wp_nav_menu($WPX_offcanvas_menu_args);
-                        } ?>
-                        <!-- End Mainmanu Nav -->
+            <div class="container">
+                <div class="wpx-mainmenu">
+                    <div class="header-navbar">
+                        <div class="header-logo">
+                            <a href="<?php echo esc_url( home_url( '/' ) );?>">
+                                <img class="light-version-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-1.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="header-main-nav">
+                            <!-- Start Mainmanu Nav -->
+                            <?php if (has_nav_menu('primary')) {
+                                wp_nav_menu($WPX_offcanvas_menu_args);
+                                
+                            } ?>
+                            <!-- End Mainmanu Nav -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </header> 
+        </header>
+    </div>
+</body> 
         

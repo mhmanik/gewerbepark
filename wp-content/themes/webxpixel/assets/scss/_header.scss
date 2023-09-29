@@ -1,4 +1,56 @@
 /*-------------------------
+   Header-top Styles
+-------------------------*/
+
+.header-top{
+    background-color: var(--color-header-top);
+    .headerTop-list-wrap{
+        .headerTop-list{
+            gap: 15px;
+            display: flex;
+            align-items: center;
+            li{
+                font-size: var(--font-body-2);
+                color: var(--color-top-text);
+                font-weight: 400;
+                a{
+                    color: var(--color-top-text);
+                    font-weight: 400;
+                    background-color: transparent;
+                    padding: 15px 14px;
+                    transition: var(--transition);
+                    &:hover{
+                        background-color: var(--color-secondary);
+                        color: var(--color-white);
+                    }
+                }
+                .style{
+                    &:hover{
+                        background-color: var(--color-hover);
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.text-style{
+    margin-left: 4px;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------
    Header Styles
 -------------------------*/
 .wpx-header {
@@ -15,6 +67,7 @@
         .header-logo {
             a {
                 display: block;
+                width: 310px;
             }
 
             .dark-version-logo {
@@ -34,7 +87,7 @@
 
         .header-main-nav {
             flex: 1;
-            margin: 0 55px 0 50px;
+            justify-content: end;
 
             @media #{$smlg-device} {
                 margin: 0 30px;
@@ -48,8 +101,6 @@
 
     &.header-style-1 {
         .wpx-mainmenu {
-            padding-left: 160px;
-            padding-right: 160px;
             &.wpx-sticky {
                 .header-navbar {
                     .header-logo {
@@ -99,7 +150,7 @@
             }
 
             .mainmenu {
-                justify-content: center;
+                justify-content: end;
             }
         }
     }
@@ -111,6 +162,7 @@
                     .header-logo {
                         .light-version-logo {
                             display: none;
+                            width: 100%;
                         }
 
                         .sticky-logo {
@@ -237,7 +289,7 @@
     transition: var(--transition);
 
     @media #{$laptop-device} {
-        padding: 35px 0;
+        padding: 28px 0;
     }
 
     @media #{$smlg-device} {
@@ -291,18 +343,17 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
+    gap: 40px;
+    justify-content: end;
     >li {
-        margin: 0 24px;
-
         @media #{$smlg-device} {
             margin: 0 12px;
         }
 
         >a {
-            color: var(--color-body);
-            font-weight: 500;
-            font-size: var(--font-body-2);
+            color: var(--color-menu);
+            font-weight: 700;
+            font-size: 20px;
             font-family: var(--font-primary);
             line-height: 60px;
             height: 60px;

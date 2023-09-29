@@ -3,13 +3,17 @@
 -------------------------*/
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1156px;
+        max-width: 1390px;
     }
 }
-a {
+.no-text-decoration,a{
     display: inline-block;
     text-decoration: none;
     transition: var(--transition);
+}
+
+.section-padding {
+    padding: 80px 0;
 }
 
 span {
@@ -21,6 +25,12 @@ img {
     height: auto;
     vertical-align: middle;
 }
+ul{
+    margin-bottom: 0;
+    padding: 0;
+}
 ul li{
     list-style: none;
+    margin-bottom: 0;
+    padding: 0;
 }
