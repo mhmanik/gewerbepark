@@ -104,7 +104,7 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Sub Title', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( 'Up to 10 users', 'wpx-elements' ),
+		        'default' => esc_html__( 'pro m³/Woche*', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		);         
@@ -113,10 +113,19 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Price', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( '$0', 'wpx-elements' ),
+		        'default' => esc_html__( '4,95 €', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		); 
+        $this->add_control(
+            'currency',
+            [
+                'label' => esc_html__( 'currency', 'wpx-elements' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'ab', 'wpx-elements' ),
+                'placeholder' => esc_html__( 'Currency is here', 'wpx-elements' ),
+            ]
+        ); 
         $this->add_control(
             'button_show_hide1',
             [
@@ -258,81 +267,7 @@ class wpx_pricing extends Widget_Base {
                 'title_field' => '{{{ info_title1 }}}',
             ]
         );
-        $this->add_control(
-            'animation_show_hide_1',
-            [
-                'label' => esc_html__('Animation Show Hide', 'wpx-elements'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'wpx-elements'),
-                'label_off' => esc_html__('Hide', 'wpx-elements'),
-                'return_value' => 'yes',
-                'default' => 'no',
-            ]
-        );       
-        $this->add_control(
-            'sal_animation_1',
-            [
-                'label'   => esc_html__('Animation Name', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    'fade' => esc_html__('Fade', 'wpx-elements'),
-                    'slide-up' => esc_html__('Slide Up', 'wpx-elements'),
-                    'slide-down' => esc_html__('Slide Down', 'wpx-elements'),
-                    'slide-left' => esc_html__('Slide Left', 'wpx-elements'),
-                    'slide-right' => esc_html__('Slide Right', 'wpx-elements'),
-                    'zoom-in' => esc_html__('Zoom In', 'wpx-elements'),
-                    'zoom-out' => esc_html__('Zoom Out', 'wpx-elements'),
-                    'flip-up' => esc_html__('Flip Up', 'wpx-elements'),
-                    'flip-down' => esc_html__('Flip Down', 'wpx-elements'),
-                    'flip-left' => esc_html__('Flip Left', 'wpx-elements'),
-                    'flip-right' => esc_html__('Flip Right', 'wpx-elements'),
-                ],
-                'default' => 'fade',
-                'condition' => array( 'animation_show_hide_1' => array( 'yes' ) ),
-            ]
-        );     
-        $this->add_control(
-            'sal_duration_1',
-            [
-                'label'   => esc_html__('Animation Duration', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '500',
-                'condition' => array( 'animation_show_hide_1' => array( 'yes' ) ),
-            ]
-        );         
-        $this->add_control(
-            'sal_delay_1',
-            [
-                'label'   => esc_html__('Animation Delay', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '100',
-                'condition' => array( 'animation_show_hide_1' => array( 'yes' ) ),
-            ]
-        );
+        
         $this->end_controls_section(); 
 
         $this->start_controls_section(
@@ -390,7 +325,7 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Sub Title', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( 'Up to 50 users', 'wpx-elements' ),
+		        'default' => esc_html__( 'pro m²/Tag*', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		);         
@@ -399,10 +334,19 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Price', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( '$25', 'wpx-elements' ),
+		        'default' => esc_html__( '0,32 €', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		); 
+         $this->add_control(
+            'currency2',
+            [
+                'label' => esc_html__( 'currency', 'wpx-elements' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'ab', 'wpx-elements' ),
+                'placeholder' => esc_html__( 'Currency is here', 'wpx-elements' ),
+            ]
+        ); 
         $this->add_control(
             'button_show_hide2',
             [
@@ -545,81 +489,7 @@ class wpx_pricing extends Widget_Base {
                 'title_field' => '{{{ info_title2 }}}',
             ]
         );
-        $this->add_control(
-            'animation_show_hide_2',
-            [
-                'label' => esc_html__('Animation Show Hide', 'wpx-elements'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'wpx-elements'),
-                'label_off' => esc_html__('Hide', 'wpx-elements'),
-                'return_value' => 'yes',
-                'default' => 'no',
-            ]
-        );       
-        $this->add_control(
-            'sal_animation_2',
-            [
-                'label'   => esc_html__('Animation Name', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    'fade' => esc_html__('Fade', 'wpx-elements'),
-                    'slide-up' => esc_html__('Slide Up', 'wpx-elements'),
-                    'slide-down' => esc_html__('Slide Down', 'wpx-elements'),
-                    'slide-left' => esc_html__('Slide Left', 'wpx-elements'),
-                    'slide-right' => esc_html__('Slide Right', 'wpx-elements'),
-                    'zoom-in' => esc_html__('Zoom In', 'wpx-elements'),
-                    'zoom-out' => esc_html__('Zoom Out', 'wpx-elements'),
-                    'flip-up' => esc_html__('Flip Up', 'wpx-elements'),
-                    'flip-down' => esc_html__('Flip Down', 'wpx-elements'),
-                    'flip-left' => esc_html__('Flip Left', 'wpx-elements'),
-                    'flip-right' => esc_html__('Flip Right', 'wpx-elements'),
-                ],
-                'default' => 'fade',
-                'condition' => array( 'animation_show_hide_2' => array( 'yes' ) ),
-            ]
-        );     
-        $this->add_control(
-            'sal_duration_2',
-            [
-                'label'   => esc_html__('Animation Duration', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '500',
-                'condition' => array( 'animation_show_hide_2' => array( 'yes' ) ),
-            ]
-        );         
-        $this->add_control(
-            'sal_delay_2',
-            [
-                'label'   => esc_html__('Animation Delay', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '100',
-                'condition' => array( 'animation_show_hide_2' => array( 'yes' ) ),
-            ]
-        );
+        
         $this->end_controls_section(); 
 
         $this->start_controls_section(
@@ -677,7 +547,7 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Sub Title', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( 'Up to 50 users', 'wpx-elements' ),
+		        'default' => esc_html__( 'pro m²/Tag*', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		);         
@@ -686,10 +556,19 @@ class wpx_pricing extends Widget_Base {
 		    [
 		        'label' => esc_html__( 'Price', 'wpx-elements' ),
 		        'type' => Controls_Manager::TEXTAREA,
-		        'default' => esc_html__( '$35', 'wpx-elements' ),
+		        'default' => esc_html__( '0,47 €', 'wpx-elements' ),
 		        'placeholder' => esc_html__( 'Title is here', 'wpx-elements' ),
 		    ]
 		); 
+         $this->add_control(
+            'currency3',
+            [
+                'label' => esc_html__( 'currency', 'wpx-elements' ),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__( 'ab', 'wpx-elements' ),
+                'placeholder' => esc_html__( 'Currency is here', 'wpx-elements' ),
+            ]
+        ); 
         $this->add_control(
             'button_show_hide3',
             [
@@ -832,81 +711,7 @@ class wpx_pricing extends Widget_Base {
                 'title_field' => '{{{ info_title3 }}}',
             ]
         );
-        $this->add_control(
-            'animation_show_hide_3',
-            [
-                'label' => esc_html__('Animation Show Hide', 'wpx-elements'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'wpx-elements'),
-                'label_off' => esc_html__('Hide', 'wpx-elements'),
-                'return_value' => 'yes',
-                'default' => 'no',
-            ]
-        );       
-        $this->add_control(
-            'sal_animation_3',
-            [
-                'label'   => esc_html__('Animation Name', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    'fade' => esc_html__('Fade', 'wpx-elements'),
-                    'slide-up' => esc_html__('Slide Up', 'wpx-elements'),
-                    'slide-down' => esc_html__('Slide Down', 'wpx-elements'),
-                    'slide-left' => esc_html__('Slide Left', 'wpx-elements'),
-                    'slide-right' => esc_html__('Slide Right', 'wpx-elements'),
-                    'zoom-in' => esc_html__('Zoom In', 'wpx-elements'),
-                    'zoom-out' => esc_html__('Zoom Out', 'wpx-elements'),
-                    'flip-up' => esc_html__('Flip Up', 'wpx-elements'),
-                    'flip-down' => esc_html__('Flip Down', 'wpx-elements'),
-                    'flip-left' => esc_html__('Flip Left', 'wpx-elements'),
-                    'flip-right' => esc_html__('Flip Right', 'wpx-elements'),
-                ],
-                'default' => 'fade',
-                'condition' => array( 'animation_show_hide_3' => array( 'yes' ) ),
-            ]
-        );     
-        $this->add_control(
-            'sal_duration_3',
-            [
-                'label'   => esc_html__('Animation Duration', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '500',
-                'condition' => array( 'animation_show_hide_3' => array( 'yes' ) ),
-            ]
-        );         
-        $this->add_control(
-            'sal_delay_3',
-            [
-                'label'   => esc_html__('Animation Delay', 'wpx-elements' ),
-                'type'    => Controls_Manager::SELECT,
-                'options' => [
-                    '100' => esc_html__('100', 'wpx-elements'),
-                    '200' => esc_html__('200', 'wpx-elements'),
-                    '300' => esc_html__('300', 'wpx-elements'),
-                    '400' => esc_html__('400', 'wpx-elements'),
-                    '500' => esc_html__('500', 'wpx-elements'),
-                    '600' => esc_html__('600', 'wpx-elements'),
-                    '700' => esc_html__('700', 'wpx-elements'),
-                    '800' => esc_html__('800', 'wpx-elements'),
-                    '900' => esc_html__('900', 'wpx-elements'),
-                    '1000' => esc_html__('1000', 'wpx-elements'),
-                ],
-                'default' => '100',
-                'condition' => array( 'animation_show_hide_3' => array( 'yes' ) ),
-            ]
-        );
+         
         $this->end_controls_section(); 
     } 
 
@@ -974,90 +779,113 @@ class wpx_pricing extends Widget_Base {
         ?>
         <section class="pricing pricing-wrap">
             <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <?php if ( $settings['animation_show_hide_1'] == 'yes') { ?>
-                        <div class="col-12 col-md-6 col-lg-4" data-sal="<?php echo esc_html($settings['sal_animation_1']); ?>" data-sal-duration="<?php echo esc_html($settings['sal_duration_1']); ?>" data-sal-delay="<?php echo esc_html($settings['sal_delay_1']); ?>">
-                    <?php } else { ?>
-                        <div class="col-12 col-md-6 col-lg-4">
-                    <?php } ?>
-                        <div class="pricing-style-1">                            
-                            <?php if ($settings['title_tag1']) : ?>
-                                <?php  if($settings['title1']){ ?>
-                                    <<?php echo esc_html( $settings['title_tag1'] );?> class="title">
-                                        <?php echo wpx_kses_intermediate( $settings['title1'] );?>
-                                    </<?php echo esc_html( $settings['title_tag1'] );?>> 
-                                <?php  } ?>             
-                            <?php endif; ?>
-                            <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title1'] );?></div>
-                            <div class="price"><?php echo wpx_kses_intermediate( $settings['price1'] );?> <span>/mo</span></div>
-                            <?php if ( $settings['button_show_hide1'] == 'yes') { ?>
-                                <div class="pricing-btn">
-                                    <?php echo wp_kses($btn1, $allowed_tags); ?>
+                <div class="row g-4 justify-content-center"> 
+                        <div class="col-12 col-md-6 col-lg-4"> 
+                            <div class="pricing-style-1">                            
+                             <div class="prices-title">
+                                <?php if ($settings['title_tag1']) : ?>
+                                    <?php  if($settings['title1']){ ?>
+                                        <<?php echo esc_html( $settings['title_tag1'] );?> class="title">
+                                            <?php echo wpx_kses_intermediate( $settings['title1'] );?>
+                                        </<?php echo esc_html( $settings['title_tag1'] );?>> 
+                                    <?php  } ?>             
+                                <?php endif; ?>
+                                </div> 
+                                <div class="price-title">
+                                    <div class="price">
+                                        <span class="currency">
+                                            <?php echo esc_attr($settings['currency']); ?> 
+                                        </span>
+                                        <?php echo wpx_kses_intermediate( $settings['price1'] );?> 
+                                    </div>
+                                    <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title1'] );?></div>
+                               </div>
+                                <ul class="pricing-list-box">
+                                    <?php foreach ($settings['sc_option_list1'] as $sc_option_list1): ?> 
+                                       <li>
+                                            <i class="<?php echo esc_attr($sc_option_list1['icon1']['value']); ?>"></i>
+                                            <?php echo esc_html($sc_option_list1['info_title1']); ?>
+                                        </li>       
+                                    <?php endforeach; ?> 
+                                   </ul>
+                                 <?php if ( $settings['button_show_hide1'] == 'yes') { ?>
+                                    <div class="pricing-btn">
+                                        <?php echo wp_kses($btn1, $allowed_tags); ?>
+                                    </div>
+                                <?php } ?> 
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-6 col-lg-4"> 
+                            <div class="pricing-style-1">
+                                <span class="recommended">Bester Preis!</span>
+                                 <div class="prices-title">
+                                    <?php if ($settings['title_tag2']) : ?>
+                                        <?php  if($settings['title2']){ ?>
+                                            <<?php echo esc_html( $settings['title_tag2'] );?> class="title">
+                                                <?php echo wpx_kses_intermediate( $settings['title2'] );?>
+                                            </<?php echo esc_html( $settings['title_tag2'] );?>> 
+                                        <?php  } ?>             
+                                    <?php endif; ?>
+                                </div> 
+                                <div class="price-title">
+                                    <div class="price">
+                                        <span class="currency">
+                                            <?php echo esc_attr($settings['currency2']); ?> 
+                                        </span>
+                                        <?php echo wpx_kses_intermediate( $settings['price2'] );?> 
+                                    </div>
+                                    <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title2'] );?></div>
+                               </div>
+                                <ul class="pricing-list-box">
+                                    <?php foreach ($settings['sc_option_list2'] as $sc_option_list2): ?> 
+                                       <li>
+                                            <i class="<?php echo esc_attr($sc_option_list2['icon2']['value']); ?>"></i>
+                                            <?php echo esc_html($sc_option_list2['info_title2']); ?>
+                                        </li>       
+                                    <?php endforeach; ?> 
+                                   </ul> 
+  
+                                <?php if ( $settings['button_show_hide2'] == 'yes') { ?>
+                                    <div class="pricing-btn">
+                                        <?php echo wp_kses($btn2, $allowed_tags); ?>
+                                    </div>
+                                <?php } ?> 
+                            </div>
+                        </div> 
+                        <div class="col-12 col-md-6 col-lg-4"> 
+                        <div class="pricing-style-1">     
+                             <div class="prices-title">                       
+                                <?php if ($settings['title_tag3']) : ?>
+                                    <?php  if($settings['title3']){ ?>
+                                        <<?php echo esc_html( $settings['title_tag3'] );?> class="title">
+                                            <?php echo wpx_kses_intermediate( $settings['title3'] );?>
+                                        </<?php echo esc_html( $settings['title_tag3'] );?>> 
+                                    <?php  } ?>             
+                                <?php endif; ?>
+                            </div> 
+                            <div class="price-title">
+                                <div class="price">
+                                    <span class="currency">
+                                        <?php echo esc_attr($settings['currency3']); ?> 
+                                    </span>
+                                    <?php echo wpx_kses_intermediate( $settings['price3'] );?> 
                                 </div>
-                            <?php } ?> 
-                            <?php foreach ($settings['sc_option_list1'] as $sc_option_list1): ?> 
-                                <div class="pricing-list-box">
-                                    <i class="<?php echo esc_attr($sc_option_list1['icon1']['value']); ?>"></i>
-                                    <?php echo esc_html($sc_option_list1['info_title1']); ?>                      
-                                </div>
-                            <?php endforeach; ?> 
-                        </div>
-                    </div>
-                    <?php if ( $settings['animation_show_hide_2'] == 'yes') { ?>
-                        <div class="col-12 col-md-6 col-lg-4" data-sal="<?php echo esc_html($settings['sal_animation_2']); ?>" data-sal-duration="<?php echo esc_html($settings['sal_duration_2']); ?>" data-sal-delay="<?php echo esc_html($settings['sal_delay_2']); ?>">
-                    <?php } else { ?>
-                        <div class="col-12 col-md-6 col-lg-4">
-                    <?php } ?>
-                        <div class="pricing-style-1">
-                            <span class="recommended">Chosen by 57% of businesses</span>
-                            <?php if ($settings['title_tag2']) : ?>
-                                <?php  if($settings['title2']){ ?>
-                                    <<?php echo esc_html( $settings['title_tag2'] );?> class="title">
-                                        <?php echo wpx_kses_intermediate( $settings['title2'] );?>
-                                    </<?php echo esc_html( $settings['title_tag2'] );?>> 
-                                <?php  } ?>             
-                            <?php endif; ?>
-                            <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title2'] );?></div>
-                            <div class="price"><?php echo wpx_kses_intermediate( $settings['price2'] );?> <span>/mo</span></div>
-                            <?php if ( $settings['button_show_hide2'] == 'yes') { ?>
-                                <div class="pricing-btn">
-                                    <?php echo wp_kses($btn2, $allowed_tags); ?>
-                                </div>
-                            <?php } ?> 
-                            <?php foreach ($settings['sc_option_list2'] as $sc_option_list2): ?> 
-                                <div class="pricing-list-box">
-                                    <i class="<?php echo esc_attr($sc_option_list2['icon2']['value']); ?>"></i>
-                                    <?php echo esc_html($sc_option_list2['info_title2']); ?>                      
-                                </div>
-                            <?php endforeach; ?> 
-                        </div>
-                    </div>
-                    <?php if ( $settings['animation_show_hide_3'] == 'yes') { ?>
-                        <div class="col-12 col-md-6 col-lg-4" data-sal="<?php echo esc_html($settings['sal_animation_3']); ?>" data-sal-duration="<?php echo esc_html($settings['sal_duration_3']); ?>" data-sal-delay="<?php echo esc_html($settings['sal_delay_3']); ?>">
-                    <?php } else { ?>
-                        <div class="col-12 col-md-6 col-lg-4">
-                    <?php } ?>
-                        <div class="pricing-style-1">                            
-                            <?php if ($settings['title_tag3']) : ?>
-                                <?php  if($settings['title3']){ ?>
-                                    <<?php echo esc_html( $settings['title_tag3'] );?> class="title">
-                                        <?php echo wpx_kses_intermediate( $settings['title3'] );?>
-                                    </<?php echo esc_html( $settings['title_tag3'] );?>> 
-                                <?php  } ?>             
-                            <?php endif; ?>
-                            <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title3'] );?></div>
-                            <div class="price"><?php echo wpx_kses_intermediate( $settings['price3'] );?> <span>/mo</span></div>
-                            <?php if ( $settings['button_show_hide3'] == 'yes') { ?>
+                                <div class="sub-title"><?php echo wpx_kses_intermediate( $settings['sub_title3'] );?></div>
+                           </div>
+                            <ul class="pricing-list-box">
+                                <?php foreach ($settings['sc_option_list3'] as $sc_option_list3): ?> 
+                                   <li>
+                                        <i class="<?php echo esc_attr($sc_option_list3['icon3']['value']); ?>"></i>
+                                        <?php echo esc_html($sc_option_list3['info_title3']); ?>
+                                    </li>       
+                                <?php endforeach; ?> 
+                           </ul>  
+
+                             <?php if ( $settings['button_show_hide3'] == 'yes') { ?>
                                 <div class="pricing-btn">
                                     <?php echo wp_kses($btn3, $allowed_tags); ?>
                                 </div>
                             <?php } ?> 
-                            <?php foreach ($settings['sc_option_list3'] as $sc_option_list3): ?> 
-                                <div class="pricing-list-box">
-                                    <i class="<?php echo esc_attr($sc_option_list3['icon3']['value']); ?>"></i>
-                                    <?php echo esc_html($sc_option_list3['info_title3']); ?>                      
-                                </div>
-                            <?php endforeach; ?> 
                         </div>
                     </div>
                 </div>
